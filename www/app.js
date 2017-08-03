@@ -13,26 +13,26 @@ function renderMix(mix, isAnimated) {
     return `
         <div class="col-sm-12">
             <div class="panel panel-primary ${isAnimated?"animateIn":""}">
-                <div class="panel-heading">Mix ID: ${mix.mixId}</div>
+                <div class="panel-heading">販売セット構成ID: ${mix.mixId}</div>
                 <div class="panel-body">
                     <div class="col-md-12 col-lg-7">
                         <table>
                             <tr>
-                                <td class="panel-table-label">Customer:</td><td>${mix.account}</td>
+                                <td class="panel-table-label">顧客:</td><td>${mix.account}</td>
                             </tr>
                             <tr>
-                                <td class="panel-table-label">Mix Name:</td><td>${mix.mixName}</td>
+                                <td class="panel-table-label">販売セット構成名:</td><td>${mix.mixName}</td>
                             </tr>
                         </table>
-                    </div>   
+                    </div>
                     <div class="col-md-12 col-lg-5">
                         <button class="btn btn-info" onclick="getMixDetails('${mix.mixId}')">
                             <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
-                            View Details
+                            詳細を見る
                         </button>
                         <button class="btn btn-info" onclick="approveMix('${mix.mixId}')">
                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                            Approve
+                            承諾
                         </button>
                     </div>
                     <div id="details-${mix.mixId}" class="col-md-12"></div>
@@ -46,20 +46,20 @@ function renderMixDetails(mix, items) {
     var html = `
         <table class="table">
             <tr>
-                <th colspan="2">Product</th>
-                <th>MSRP</th>
-                <th>Qty</th>
+                <th colspan="2">製品</th>
+                <th>希望小売価格</th>
+                <th>数量</th>
             </tr>`;
     items.forEach(function(item) {
         html = html + `
             <tr>
                 <td><img src="${item.pictureURL}" style="height:50px"/></td>
                 <td>${item.productName}</td>
-                <td>$${item.price}</td>
+                <td>￥${item.price}</td>
                 <td>${item.qty}</td>
             </tr>`
     });
-    html = html + "</table>"    
+    html = html + "</table>"
     var details = document.getElementById('details-' + mix.mixId);
     details.innerHTML = html;
 }

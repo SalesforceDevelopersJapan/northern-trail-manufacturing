@@ -7,7 +7,7 @@ let server = require('http').Server(app);
 let io = require('socket.io')(server);
 
 let getMixes = (req, res) => {
-    let q = "SELECT Id, Name, Account__r.Name FROM Merchandising_Mix__c WHERE Status__c='Submitted to Manufacturing'";
+    let q = "SELECT Id, Name, Account__r.Name FROM Merchandising_Mix__c WHERE Status__c='製造部門へ送信済み'";
     org.query({query: q}, (err, resp) => {
         if (err) {
             console.log(err);
