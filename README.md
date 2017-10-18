@@ -1,16 +1,14 @@
-## Northern Trail Manufacturing
+## ノーザントレイルアウトフィッターズ サンプルアプリケーション (製造部門)
 
-Read [this blog post]() for more information.
+[オリジナルのリポジトリ](https://github.com/ccoenraets/northern-trail-manufacturing)の日本語版になります。
 
-Follow the instructions below to deploy your own instance of the application:
-
-1. Make sure you are logged in to the Heroku Dashboard
-1. Click the button below to deploy the manufacturing app on Heroku:
+1. Heroku Dashboardにログインしていることを確認します
+1. 以下のボタンで製造部門アプリケーションをHerokuへデプロイします:
 
     [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-1. Fill in the config variables as follows:
-    - For **SF_APP_ID**, enter the Consumer Key of your Salesforce Connected App
-    - For **SF_APP_SECRET**, enter the Consumer Secret of your Salesforce Connected App
-    - For **SF_USER_NAME**, enter the the username of your Salesforce user
-    - For **SF_USER_PASSWORD**, enter the the password of your Salesforce user
+1. 以下のConfig Varsを入力します:
+    - **SF_APP_ID**, Salesforce 接続アプリケーションのコンシューマキーを入力します
+    - **SF_APP_SECRET**, Salesforce 接続アプリケーションのコンシューマシークレットを入力します
+    - **SF_USER_NAME**, 連携を行うSalesforce ユーザ名を入力します
+    - **SF_USER_PASSWORD**, 連携を行うSalesforceユーザのパスワードを入力します

@@ -1,21 +1,21 @@
 {
-  "name": "Northern Trail Manufacturing",
-  "description": "Sample application",
+  "name": "ノーザントレイル製造",
+  "description": "サンプルアプリケーション",
   "env": {
     "SF_CLIENT_ID": {
-        "description": "Consumer key of your Salesforce Connected App",
+        "description": "Salesforce 接続アプリケーションのコンシューマキー",
         "value":""
     },
     "SF_CLIENT_SECRET": {
-        "description": "Consumer secret of your Salesforce Connected App",
+        "description": "Salesforce 接続アプリケーションのコンシューマシークレット",
         "value":""
     },
     "SF_USER_NAME": {
-        "description": "Salesforce username for your integration user",
+        "description": "Salesforce連携ユーザのユーザ名",
         "value":""
     },
     "SF_USER_PASSWORD": {
-        "description": "Salesforce password for your integration user",
+        "description": "Salesforce連携ユーザのパスワード",
         "value":""
     }
   }
